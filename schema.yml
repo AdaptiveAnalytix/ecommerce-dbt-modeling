@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mrt_monthly_revenue
+    description: "Final finance table aggregating revenue by month."
+    columns:
+      - name: order_month
+        tests:
+          - not_null
+          - unique
+      - name: gross_revenue
+        description: "Total revenue in USD after successful payments."
+        tests:
+          - not_null
